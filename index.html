@@ -1,39 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./public/css/app.css" />
-    <title>Memory game</title>
-  </head>
 
-  <body>
-    <!-- <div class="welcome">
-      <span>start</span>
-      <div class="selection">
-        <input type="radio" name="easy" id="easy" value="easy" />
-        <label for="easy">Easy</label>
-        <input type="radio" name="normal" id="normal" value="normal" />
-        <label for="normal">Normal</label>
-        <input type="radio" name="hard" id="hard" value="hard"  />
-        <label for="hard">Hard</label>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./public/css/app.css" />
+  <title>Memory game</title>
+</head>
+
+<body>
+
+  <div class="welcome">
+    <input type="text" id="inputs">
+    <span>start</span>
+    <div class="selection">
+      <input type="radio" name="easy" id="easy" value="easy" />
+      <label for="easy">Easy</label>
+      <input type="radio" name="normal" id="normal" value="normal" />
+      <label for="normal">Normal</label>
+      <input type="radio" name="hard" id="hard" value="hard" />
+      <label for="hard">Hard</label>
+    </div>
+    <p class="red"></p>
+  </div>
+  <div class="container">
+    <div class="info">
+      <div class="name">
+        <span></span>
       </div>
-    </div>  -->
-    <div class="container">
-      <div class="info">
-        <div class="name">
-          <span></span>
-        </div>
-        <div class="score">
-          <span>00</span>
-          <span>00:00</span>
-        </div>
-      </div>
-      <div class="content">
-     
+      <div class="score">
+        <span id="try">00</span>
+        <span>00:00</span>
       </div>
     </div>
+    <div class="content">
 
-    <script type="module" src="./public/js/app.js"></script>
-  </body>
+    </div>
+  </div>
+  <div class="song">
+    <audio id="narutoSongtwo" type="audio/mp3" autoplay loop>
+      <source src="./public/song/NarutoOST2.mp3">
+    </audio>
+    <button class="mutebtn">mute</button>
+  </div>
+  <script type="module" src="./public/js/app.js"></script>
+</body>
+
 </html>
