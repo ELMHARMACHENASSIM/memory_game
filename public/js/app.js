@@ -111,23 +111,29 @@ let images = [
 let randomImg = images.sort(() => Math.random() - 0.5);
 for (let i = 0; i < randomImg.length; i++) {
   let image = randomImg[i];
-  content.innerHTML += `<div class="game-square" data-namechar="${image.name}">
+  content.innerHTML += `<div class="game-square flipe" data-namechar="${image.name}">
     <div class="face front "></div>
     <div class="face back">
       <img src="${image.src}" alt="" srcset="" />
     </div>
   </div>`;
+
 }
 
 let gameSquare = document.querySelectorAll(".game-square");
 let ary = Array.from(gameSquare);
 
 ary.forEach((element) => {
+  
+  setTimeout(() => {
+    element.classList.remove("flipe");
+  }, 8000);
   element.addEventListener("click", () => {
-    element.classList.add("flipe");
     let soundflipe = document.querySelector("#flipecard");
     soundflipe.volume = 1;
 soundflipe.play()
+    element.classList.add("flipe");
+    
     let filtImg = ary.filter((img) => img.classList.contains("flipe"));
     if (filtImg.length === 2) {
       console.log("wa baraka 3lik 4a zouj");
