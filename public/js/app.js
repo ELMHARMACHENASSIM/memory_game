@@ -125,10 +125,10 @@ let ary = Array.from(gameSquare);
 ary.forEach((element) => {
   element.addEventListener("click", () => {
     element.classList.add("flipe");
-    let filtImg = ary.filter((img) => img.classList.contains("flipe"));
-let soundflipe = document.querySelector("#flipecard");
-soundflipe.volume = 1;
+    let soundflipe = document.querySelector("#flipecard");
+    soundflipe.volume = 1;
 soundflipe.play()
+    let filtImg = ary.filter((img) => img.classList.contains("flipe"));
     if (filtImg.length === 2) {
       console.log("wa baraka 3lik 4a zouj");
       stopCliking();
