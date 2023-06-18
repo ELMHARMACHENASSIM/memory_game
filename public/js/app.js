@@ -7,7 +7,7 @@ let duration = 1000;
 let easy = [];
 let normal = [];
 let hard = [];
-
+song.volume = 0.1;
 spanClick.addEventListener("click", () => {
   let urName = input.value;
   if (urName == null || urName == "") {
@@ -20,10 +20,12 @@ spanClick.addEventListener("click", () => {
     song.play();
     btnSong.addEventListener("click", mutedSong, false);
     function mutedSong() {
+   
       if (song.muted == true) {
         song.muted = false;
         btnSong.textContent = "muted";
       } else {
+       
         song.muted = true;
         btnSong.textContent = "unmuted";
       }
@@ -124,7 +126,9 @@ ary.forEach((element) => {
   element.addEventListener("click", () => {
     element.classList.add("flipe");
     let filtImg = ary.filter((img) => img.classList.contains("flipe"));
-
+let soundflipe = document.querySelector("#flipecard");
+soundflipe.volume = 1;
+soundflipe.play()
     if (filtImg.length === 2) {
       console.log("wa baraka 3lik 4a zouj");
       stopCliking();
